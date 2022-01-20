@@ -5,10 +5,8 @@
 // ASCII, abbreviated from American Standard Code for Information Interchange, 
 // is a character encoding standard for electronic communication. ASCII codes represent text in computers, telecommunications equipment, 
 // and other devices. Most modern character-encoding schemes are based on ASCII, although they support many additional characters.
-// Mocha test
-let assert = require('assert');
 
-function getChar(number) {
+module.exports = function getChar(number) {
 
     // found a list of ASCII characters from the web 
     let ASCII = 
@@ -45,4 +43,3 @@ function getChar(number) {
         }
     }
 }
-
