@@ -1,6 +1,10 @@
 {
   "dependencies": {
-    "chai": "^4.3.4"
+    "chai": "^4.3.4",
+    "npm-watch": "^0.11.0"
+  },
+  "watch": {
+    "test": "{src,test}/*.js"
   },
   "scripts": {
     "test": "mocha"
