@@ -11,3 +11,9 @@
 
 //     In mathematics, a square number or perfect square is an integer that is the square of an integer; in other words, it is the product of some integer with itself.
 
+// Thought process: 
+// first step, google square number and examples of square numbers, from wikipedia:
+//  For example, 9 is a square number, since it equals 3^2 and can be written as 3 × 3
+// from this example can see that we may have to incorporate the modulus operator, &
+// from the task, checking to see if it's a square, means a function that returns a boolean
+// 
