@@ -1,9 +1,8 @@
 let isWholeNumber = require('./isWholeNumber');
 
 module.exports = function isSquare(n){
-    if ( n > 0 && typeof number && isWholeNumber(n) ) {
-        console.log('hit');
-        
+    if ( typeof number && n > 0 && isWholeNumber(Math.sqrt(n) )) {
+        return true
     } else {
         return false
     }
