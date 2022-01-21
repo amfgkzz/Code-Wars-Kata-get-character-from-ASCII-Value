@@ -11,7 +11,6 @@ In mathematics, a square number or perfect square is an integer that is the squa
     Thought process: 
 first step, google square number and examples of square numbers, from wikipedia:
 For example, 9 is a square number, since it equals 3^2 and can be written as 3 × 3
-from this example can see that we may have to incorporate the modulus operator, & <- do we have to use?
 function will take a number input
 check for integer type and check that number isn't negative
 function that returns a boolean, true or false if it's a square
