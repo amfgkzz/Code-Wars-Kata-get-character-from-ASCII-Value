@@ -1,5 +1,5 @@
 let assert = require('chai').assert;
-let getChar = require('../main/getChar');
+let getChar = require('./getChar');
 
 describe("Tests", () => {
     it("test", () => {

@@ -3,6 +3,6 @@
     "chai": "^4.3.4"
   },
   "scripts": {
-    "test": "mocha ASCII-character-problem/test"
+    "test": "mocha"
   }
 }
