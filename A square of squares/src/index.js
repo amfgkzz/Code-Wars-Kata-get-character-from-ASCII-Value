@@ -14,6 +14,11 @@
 // Thought process: 
 // first step, google square number and examples of square numbers, from wikipedia:
 //  For example, 9 is a square number, since it equals 3^2 and can be written as 3 × 3
-// from this example can see that we may have to incorporate the modulus operator, &
-// from the task, checking to see if it's a square, means a function that returns a boolean
-// 
+// from this example can see that we may have to incorporate the modulus operator, & <- do we have to use?
+// function will take a number input
+// check for integer type and check that number isn't negative
+// function that returns a boolean, true or false if it's a square
+// n^2 = n * n, formula for a square number <- we just have to do the opposite in this case
+// use squareroot to find if a number is a square number, 
+// google how to use squareroot in javascript, solution -> Math.sqrt(n)
+// create test using the all the info gathered
