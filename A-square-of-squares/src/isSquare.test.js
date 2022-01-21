@@ -12,6 +12,7 @@ describe("false test", ()=>{
 
 describe("true test", ()=>{
     it("", ()=>{
+        expect(isSquare(0)).to.be.true
         expect(isSquare(9)).to.be.true
         expect(isSquare(81)).to.be.true
         expect(isSquare(6561)).to.be.true
