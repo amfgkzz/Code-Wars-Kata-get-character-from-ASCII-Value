@@ -9,8 +9,8 @@ describe("false test", ()=>{
     })
 })
 
-// describe("Test 2", ()=>{
-//     it("true test", ()=>{
-//         expect(isSquare(9)).to.be.true
-//     })
-// })
+describe("true test", ()=>{
+    it("", ()=>{
+        expect(isSquare(9)).to.be.true
+    })
+})
