@@ -26,3 +26,5 @@ flip('L', [1, 4, 5, 3, 5])  =>  [5, 5, 4, 3, 1]
 Thought Process:
 flip function has 2 inputs, 'R' or 'L' and second input is an array
 function returns an array
+seems like the pattern is when given input 'R', sort array from small to big 
+input 'L', sort array from big to small
