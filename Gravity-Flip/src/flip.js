@@ -1,12 +1,8 @@
 module.exports = function flip(d, array) {
     switch (d) {
         case 'R':
-            let rightSide = []
-            return rightSide
+            return rightSide = array.sort(function(a, b){return a-b})
         case 'L':
-            let leftSide = []
-            return leftSide
-        default:
-            break;
+            return leftSide = array.sort(function(a, b){return b-a})
     }
 }
