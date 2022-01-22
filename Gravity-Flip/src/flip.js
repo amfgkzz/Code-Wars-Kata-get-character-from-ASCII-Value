@@ -1,11 +1,11 @@
 module.exports = function flip(d, array) {
     switch (d) {
         case 'R':
-            console.log('you got R!')
-            return 'R'
+            let rightSide = []
+            return rightSide
         case 'L':
-            console.log('you got L!')
-            return 'L'
+            let leftSide = []
+            return leftSide
         default:
             break;
     }
