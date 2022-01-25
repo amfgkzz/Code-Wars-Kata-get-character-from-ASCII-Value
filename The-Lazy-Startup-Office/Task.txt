@@ -28,3 +28,7 @@ As an output you would expect in this case:
 
 ["Stefan", "Raj", "Marie", "Edward", "Amy", "Alexa", "Liz", "Claire", "Juan", "Katie", "Luke", "Dee"])
 
+Thought process:
+function input is an array of arrays containing strings
+first array starts from left to right, then right to left and so on
+function returns an array of strings in order
