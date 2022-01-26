@@ -1,14 +1,18 @@
-module.exports = function maskify(string){
-    if ( string.length > 4 ) {
-        let hash = '';
-        let keepText = string.slice(string.length - 4);
+module.exports = function maskify(string) {
+    return string.length > 4 
+    ?
+    hash(string)
+    : 
+    string
+}
 
-        for (let i = 0; i < string.length - 4; i++) {
-            hash += '#';
-        }
+function hash(string){
+    let hash = '';
+    let keepText = string.slice(string.length - 4);
 
-        return hash + keepText;
-    } else {
-        return string;
+    for (let i = 0; i < string.length - 4; i++) {
+        hash += '#';
     }
+
+    return hash + keepText;
 }
