@@ -15,10 +15,6 @@ module.exports = function binRota(array){
             }
         }
     }
-
+    
     return newArray;
 }
-
-// loop through the array
-// each inner array is added to new array
-// index of i % 2 != 0, is put into the new array in reversed order
