@@ -16,7 +16,6 @@ module.exports = function binRota(array){
         }
     }
 
-    console.log(newArray);
     return newArray;
 }
 
