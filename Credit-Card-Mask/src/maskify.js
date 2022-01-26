@@ -1,10 +1,12 @@
 module.exports = function maskify(string){
-    let newString = "";
-
-    for (let i = 0; i < string.length; i++) {
-        const element = string[i];
-        console.log(element);
+    if ( string.length > 4 ) {
+        let newString = "";
+        for (let i = 0; i < array.length; i++) {
+            const element = array[i];
+            
+        }
+        return newString;
+    } else {
+        return string;
     }
-
-    return newString;
 }
