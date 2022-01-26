@@ -7,12 +7,7 @@ module.exports = function maskify(string) {
 }
 
 function hash(string){
-    let hash = '';
+    let hash = string.slice(0, -4).replace(/./g, '#');
     let keepText = string.slice(string.length - 4);
-
-    for (let i = 0; i < string.length - 4; i++) {
-        hash += '#';
-    }
-
-    return hash + keepText;
+    return string.slice(0, -4).replace(/./g, '#') + string.slice(string.length - 4);
 }
