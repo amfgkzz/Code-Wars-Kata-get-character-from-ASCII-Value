@@ -12,3 +12,8 @@ maskify(                "") ==                 ""
 // "What was the name of your first pet?"
 maskify("Skippy")                                   == "##ippy"
 maskify("Nananananananananananananananana Batman!") == "####################################man!"
+
+Thought process:
+function input is a string
+function return is a string
+can loop from the end of the array, and cut the last four elements?
