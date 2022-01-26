@@ -1,10 +1,13 @@
 module.exports = function maskify(string){
     if ( string.length > 4 ) {
-        let newString = "";
+        let hash = '';
         let keepText = string.slice(string.length - 4);
-        let replaceHash = new RegExp(string.substr(0, string.length - 4), 'i');
-        console.log(replaceHash)
-        return newString;
+
+        for (let i = 0; i < string.length - 4; i++) {
+            hash += '#';
+        }
+
+        return hash + keepText;
     } else {
         return string;
     }
