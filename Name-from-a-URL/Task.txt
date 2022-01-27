@@ -19,3 +19,5 @@ research on URLs
 most consistent outlier are the two dots, example: www.domain.com
 have to watchout for the url's that start out with domain name, example: domain.com 
 have to watchout for the url's that start out with scheme and domain name, example: http://github.com/carbonfive/raygun 
+
+www.

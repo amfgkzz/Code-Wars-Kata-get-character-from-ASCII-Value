@@ -17,9 +17,10 @@ module.exports = function domainName(url){
             dotCount++; // count the dots
             parsedUrlTwo = parsedUrl; // store the letters before the first dot
             parsedUrl = ''; // reset
+        } else {
+            parsedUrl += element;
         }
-        parsedUrl += element;
     }
-
+    // console.log('parsedUrl: ', parsedUrl)
     return parsedUrlTwo;
 }
