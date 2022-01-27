@@ -2,18 +2,30 @@ module.exports =
 function recoverSecret(triplet){
     let secretWord = '';
     let secretValue = new Object();
-    let count = 0;
+    let value = 1;
 
     for (let i = 0; i < triplet.length; i++) {
         let randomTriplet = triplet[i];
+        let prevValue;
+        let currentValue;
         for (let j = 0; j < randomTriplet.length; j++) {
             const letter = randomTriplet[j];
-            if (!secretValue[letter]) {
-                secretValue[letter] = count;
-                count++;
+            prevValue = currentValue || null;
+            // console.log(secretValue[letter], letter)
+            if (secretValue[letter]) { // if this letter already exists AND prevValue exists, do something
+                console.log('hit')
+
+            } else {
+                secretValue[letter] = value;
+                value++;
             }
 
-
+            currentValue = secretValue[letter];
+            console.log('prevValue: ', prevValue, 'currentValue: ', currentValue, 'letter: ', letter)
+            // if (currentValue < prevValue) {
+            //     secretValue[letter] = prevValue;
+            //     secretValue[letter] = currentValue;
+            // }
         }
     }
 
