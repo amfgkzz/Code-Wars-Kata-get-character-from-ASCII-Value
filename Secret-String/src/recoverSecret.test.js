@@ -29,5 +29,6 @@ describe('Recover Secret Test', function(){
 // hatisupw, whs
 // whatisup
 
-// 012, 345
-// 012345, 678
+// tupwhi 123456, tsu
+// tupwhis 1234567, s = 7 < u = 2, s = u, every letter > u, ++letter
+// tsupwhi 1234567, s = 2
