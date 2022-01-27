@@ -18,3 +18,9 @@ As a simplification, you may assume that no letter occurs more than once in the 
 
 You can assume nothing about the triplets given to you other than that they are valid triplets and that they contain sufficient information to deduce the original string. 
 In particular, this means that the secret string will never contain letters that do not occur in one of the triplets given to you.
+
+Thought process:
+individual letters will have to be given a number associated in order to determine the order?
+    - key,value pairs
+word length will be used to determine all possible values
+keep track of all the words together, and they only show up once
