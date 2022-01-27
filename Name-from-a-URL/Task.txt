@@ -20,4 +20,6 @@ most consistent outlier are the two dots, example: www.domain.com
 have to watchout for the url's that start out with domain name, example: domain.com 
 have to watchout for the url's that start out with scheme and domain name, example: http://github.com/carbonfive/raygun 
 
-www.
+After thoughts:
+Flawed task was given in codewars, completed it anyway but function will only work on URL's with www. sub-domains 
+or URL's with no sub-domains
