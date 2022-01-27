@@ -5,3 +5,19 @@ domainName("http://www.zombie-bites.com") == "zombie-bites"
 domainName("https://www.cnet.com") == "cnet"
 
 Thought process:
+would a regex be possible?
+would I have to iterate over the string and cut out the domain name?
+how to isolate the domain name is the question
+many variations of domain name endings, ie .com, .org, etc
+only possible choices to start a url are: www., http://, http://www., https://, https:www., and having only the domain name ie google.com
+I'm thinking of creating a switch case with all the variations of starting a url
+ - how would I isolate the 
+
+research on URLs
+ - consist of different parts
+    - scheme / protocol : examples: http, https
+    - sub-domain : examples: www, blog, honestly the sub-domain can be anything
+    - domain : github.com, google.com
+
+most consistent outlier are the two dots, example: www.domain.com
+only have to watchout for the url's that start out with domain name already, example: domain.com

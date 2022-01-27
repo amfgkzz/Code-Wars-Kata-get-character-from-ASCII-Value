@@ -1,4 +1,6 @@
-module.exports = function domainName(str){
+module.exports = function domainName(url){
+    let parsedUrl = '';
 
     
+    return parsedUrl;
 }
