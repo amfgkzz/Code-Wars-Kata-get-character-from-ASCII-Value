@@ -1,7 +1,7 @@
 module.exports = 
 function recoverSecret(triplet){
     let secretValue = new Object();
-    let value = 0;
+    let position = 0;
 
     for (let i = 0; i < triplet.length; i++) {
         let randomTriplet = triplet[i];
@@ -12,37 +12,32 @@ function recoverSecret(triplet){
             currentLetter = randomTriplet[j];
             if (secretValue[currentLetter]) {
             } else {
-                value++; 
-                secretValue[currentLetter] = value;
+                position++; 
+                secretValue[currentLetter] = position;
             }
 
-            if (secretValue[prevLetter] > secretValue[currentLetter]) {
-                // console.log('prevLetter: ', prevLetter, ', currentLetter: ', currentLetter, ' value:', value)
-                console.log(`${currentLetter}: ${secretValue[currentLetter]} < ${prevLetter}: ${secretValue[prevLetter]}`)
-                secretValue[prevLetter] = secretValue[currentLetter];
-                console.log(secretValue);
-                // secretValue[currentLetter]++;
-                // console.log(`${currentLetter}: ${secretValue[currentLetter]} < ${prevLetter}: ${secretValue[prevLetter]}`)
+            if (secretValue[currentLetter] < secretValue[prevLetter]) {
                 for (let letter in secretValue) {
-                    if (secretValue[prevLetter] < secretValue[letter]) {
+                    if (secretValue[letter] < secretValue[prevLetter] && secretValue[currentLetter] < secretValue[letter]) {
                         secretValue[letter]++;
-                    }
+                    } 
                 }
+                secretValue[prevLetter] = secretValue[currentLetter];
+                secretValue[currentLetter]++;
+                console.log('2: ',secretValue);
             }
         }
     }
 
-    return sort(secretValue, value);
-    // console.log('secretWord: ', secretWord)
-    // console.log('secretValue: ', secretValue)
+    return sort(secretValue, position);
 }
 
 function sort(object, length){
     let sortedArray = new Array(length);
     for (const key in object) {
-        const element = object[key];
-        sortedArray[element] = key;
+        const position = object[key];
+        sortedArray[position-1] = key;
     }
-    // console.log(sortedArray);
+    console.log(sortedArray);
     return sortedArray.join('');
 }
