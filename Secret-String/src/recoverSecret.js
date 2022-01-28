@@ -1,49 +1,48 @@
 module.exports = 
 function recoverSecret(triplet){
-    let secretWord = '';
     let secretValue = new Object();
-    let value = 1;
+    let value = 0;
 
     for (let i = 0; i < triplet.length; i++) {
         let randomTriplet = triplet[i];
-        let prevLetter;
-        let currentLetter;
+        let prevLetter = null;
+        let currentLetter = null;
         for (let j = 0; j < randomTriplet.length; j++) {
-            const letter = randomTriplet[j];
-            prevLetter = currentLetter || null;
-            if (secretValue[letter]) {
-                // console.log('hit')
-
+            prevLetter = currentLetter;
+            currentLetter = randomTriplet[j];
+            if (secretValue[currentLetter]) {
             } else {
-                secretValue[letter] = value;
-                value++;
+                value++; 
+                secretValue[currentLetter] = value;
             }
 
-            currentLetter = letter;
-            // console.log('prevLetter: ', prevLetter, ', currentLetter: ', currentLetter)
-            if (secretValue[currentLetter] < secretValue[prevLetter]) {
-                // console.log(`${currentLetter}: ${secretValue[currentLetter]} < ${prevLetter}: ${secretValue[prevLetter]}`)
+            if (secretValue[prevLetter] > secretValue[currentLetter]) {
+                // console.log('prevLetter: ', prevLetter, ', currentLetter: ', currentLetter, ' value:', value)
+                console.log(`${currentLetter}: ${secretValue[currentLetter]} < ${prevLetter}: ${secretValue[prevLetter]}`)
                 secretValue[prevLetter] = secretValue[currentLetter];
-                secretValue[currentLetter]++;
+                console.log(secretValue);
+                // secretValue[currentLetter]++;
                 // console.log(`${currentLetter}: ${secretValue[currentLetter]} < ${prevLetter}: ${secretValue[prevLetter]}`)
                 for (let letter in secretValue) {
-                    if ( secretValue[currentLetter] <= secretValue[letter] ) {
-                    //     console.log(`${prevLetter}: ${secretValue[prevLetter]}`, ' currentLetter: ', currentLetter, ', secretValue[currentLetter]: ', secretValue[currentLetter], ', letter: ', letter, `, secretValue[letter]: `, secretValue[letter])
+                    if (secretValue[prevLetter] < secretValue[letter]) {
                         secretValue[letter]++;
                     }
-                    console.log(secretValue);
                 }
             }
         }
     }
 
+    return sort(secretValue, value);
     // console.log('secretWord: ', secretWord)
     // console.log('secretValue: ', secretValue)
 }
 
-// Latest thoughts b4 sleep:
-// hatsupwi, tis, hatupwis, whatupis, order matters function could return whatupis instead of whatisup depending on 
-// how the algorithm moves the letter positions
-// could use a while loop, I could see it making the logic easier
-// logic may be easier with using arrays n using array methods
-// keeping position values may not be needed, either way would work tho
+function sort(object, length){
+    let sortedArray = new Array(length);
+    for (const key in object) {
+        const element = object[key];
+        sortedArray[element] = key;
+    }
+    // console.log(sortedArray);
+    return sortedArray.join('');
+}
