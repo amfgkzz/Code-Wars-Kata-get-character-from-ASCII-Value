@@ -3,27 +3,33 @@ function recoverSecret(triplet){
     let secretValue = new Object();
     let prevLetter;
     let currentLetter;
-    // let counter;
 
-    for (let i = 0; i < triplet.length; i++) {
-        prevLetter = null;
-        currentLetter = null;
-        // counter = 0;
+    const store = function(a, b){
+        if (!secretValue[b]) {
+            secretValue[b] = [];
+        }
         
-        for (let j = 0; j < triplet.length; j++) {
+        if (a) {
+            secretValue[b].push(secretValue[a]);
+        }
+    }
+
+    const order = function(obj){
+        for (const letter in obj) {
+            console.log(obj[letter]);
+            
+        }
+    }
+
+    for (let i = 0; i < triplet.length; i++) {     
+        currentLetter = null;  
+        for (let j = 0; j < triplet[i].length; j++) {
             prevLetter = currentLetter;
             currentLetter = triplet[i][j];
-            // counter++;
-            
-            if (secretValue[currentLetter]) {
-                // secretValue[currentLetter] += secretValue[prevLetter];
-                // console.log(secretValue);
-            } else {
-                // secretValue[currentLetter] = counter;
-                // console.log(`${currentLetter}: `, secretValue[currentLetter]);
-            }
+            store(prevLetter, currentLetter);
         }
-
-        return secretValue;
     }
+
+    order(secretValue);
+    return secretValue;
 }
