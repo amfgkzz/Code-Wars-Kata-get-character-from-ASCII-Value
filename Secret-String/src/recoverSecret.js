@@ -43,7 +43,6 @@ function recoverSecret(triplet){
                         console.log('element after: ', element);
                         temp.push(item);
                     } else {
-                        // console.log('element: ', element, ' item: ', item, 'temp: ', temp, ' counter:', counter);
                         console.log('temp before: ',...temp)
                         console.log('item before: ',...item)
                         temp = [...temp, ...item];
