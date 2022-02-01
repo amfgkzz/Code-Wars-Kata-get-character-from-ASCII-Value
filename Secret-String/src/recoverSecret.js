@@ -16,21 +16,44 @@ function recoverSecret(triplet){
 
     const order = function(obj){
         let element;
-        let counter = 0;
+        let temp;
+        let counter;
 
-        const recursive = function(arr){
-            while (arr.length > 1) {
-                if (typeof arr[counter] == 'array'){
-                    arr[counter].concat();
-                } 
-            }
-        }
+        // const recursive = function(arr){
+        //     while (arr.length > 1) {
+        //         if (typeof arr[counter] == 'array'){
+        //             arr[counter].concat();
+        //         } 
+        //     }
+        // }
 
         for (const letter in obj) {
             element = obj[letter];
+            temp = [];
             counter = 0;
-            // recursive(element);
-            console.log(letter, element)
+            if (letter == 'a') {
+                do {
+                    let tempTwo = [];
+                    let item = element[counter];
+                    console.log('item assigned: ', item);
+                    if (typeof item == 'number'){
+                        debugger
+                        console.log('element before: ', element);
+                        element.shift();
+                        console.log('element after: ', element);
+                        temp.push(item);
+                    } else {
+                        // console.log('element: ', element, ' item: ', item, 'temp: ', temp, ' counter:', counter);
+                        console.log('temp before: ',...temp)
+                        console.log('item before: ',...item)
+                        temp = [...temp, ...item];
+                        console.log('temp after: ',...temp)
+                        // counter++;
+                    }
+                } while (0 < element.length);
+            }
+            
+            console.log('temp: ', temp)
         }
         // console.log('secretValue: ', secretValue)
     }
