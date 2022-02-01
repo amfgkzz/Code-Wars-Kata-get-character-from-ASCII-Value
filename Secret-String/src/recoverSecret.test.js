@@ -11,8 +11,7 @@ describe('Recover Secret Test', function(){
         ['a','t','s'],
         ['h','a','p'],
         ['t','i','s'],
-        ['w','h','s']
-        ] 
+        ['w','h','s'] ] 
     let triplet2 = [ 
     [ 't', 's', 'f' ],
     [ 'a', 's', 'u' ],

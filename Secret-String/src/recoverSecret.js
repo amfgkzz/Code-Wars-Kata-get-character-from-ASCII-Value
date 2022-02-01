@@ -6,7 +6,7 @@ function recoverSecret(triplet){
 
     const store = function(a, b){
         if (!secretValue[b]) {
-            secretValue[b] = [];
+            secretValue[b] = [1];
         }
         
         if (a) {
@@ -15,10 +15,24 @@ function recoverSecret(triplet){
     }
 
     const order = function(obj){
-        for (const letter in obj) {
-            console.log(obj[letter]);
-            
+        let element;
+        let counter = 0;
+
+        const recursive = function(arr){
+            while (arr.length > 1) {
+                if (typeof arr[counter] == 'array'){
+                    arr[counter].concat();
+                } 
+            }
         }
+
+        for (const letter in obj) {
+            element = obj[letter];
+            counter = 0;
+            // recursive(element);
+            console.log(letter, element)
+        }
+        // console.log('secretValue: ', secretValue)
     }
 
     for (let i = 0; i < triplet.length; i++) {     
@@ -33,3 +47,8 @@ function recoverSecret(triplet){
     order(secretValue);
     return secretValue;
 }
+
+// first you want to loop the obj
+// in obj, loop the arrays
+// in arrays, check if array
+// if array
