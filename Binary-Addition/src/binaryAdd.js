@@ -5,13 +5,13 @@ module.exports = function binaryAdd(num1, num2){
 
     for (let i = 0; i < binaryCheck.length; i++) {
         const binaryNum = array[i];
-        if (addedNum >= binaryNum) {
+        if (addedNum == 1 || addedNum >= binaryNum) {
             addedNum -= binaryNum;
             finalBinaryNum.push(1);
-        } else {
+        } else if (finalBinaryNum.length > 0) {
             finalBinaryNum.push(0);
         }
     }
 
-    return
+    return finalBinaryNum.join('');
 }
