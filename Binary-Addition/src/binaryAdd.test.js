@@ -7,5 +7,6 @@ describe('binary Add test', function(){
     })
     it('final binary number test', function(){
         assert.equal(binaryAdd(1,2), '11');
+        assert.equal(binaryAdd(150,140), '100100010');
     })
 });
