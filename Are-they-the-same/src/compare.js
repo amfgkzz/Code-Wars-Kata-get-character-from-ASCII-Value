@@ -12,11 +12,3 @@ function compare(arr1, arr2) {
         }
     }
 }
-
-function check(a, b){
-    if (typeof a !== 'number' || typeof b !== 'number') {
-        return false;
-    } else {
-        return a-b;
-    }
-}
