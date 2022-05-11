@@ -22,6 +22,10 @@ function compare(arr1, arr2) {
         const elementOne = arr1[i];
         const elementTwo = arr2[i];
         
+        if (typeof elementOne !== 'number' || typeof elementTwo !== 'number') {
+            return false;
+        }
+
         if (Math.sqrt(elementTwo) !== elementOne) {
             return false;
         }
